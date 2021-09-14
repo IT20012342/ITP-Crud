@@ -1,0 +1,21 @@
+
+         .btn-grad9 {background-image: linear-gradient(to right, #B993D6 0%, #8CA6DB  51%, #B993D6  100%)}
+         .btn-grad9 {
+            
+          width:200px;
+          height:40px;
+          text-decoration: none;
+          text-transform: uppercase;
+          transition: 0.5s;
+          background-size: 200% auto;
+          color: white;
+          border: none;
+          border-radius: 10px;
+          }
+
+          .btn-grad9:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+          }
+         
