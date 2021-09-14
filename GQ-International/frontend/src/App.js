@@ -160,6 +160,15 @@ import PostDetails from "./components/modules/AdminPageModules/Order/PostDetails
 import Shopping from "./components/modules/AdminPageModules/Order/shoppingItems"
 import EditCart from "./components/modules/AdminPageModules/Order/editCartOrder"
 
+/*payment*/
+import Payments from "./components/modules/AdminPageModules/Payment/Payments"
+import CashPayment from "./components/modules/AdminPageModules/Payment/CashPayment"
+import CashPaymentsView from "./components/modules/AdminPageModules/Payment/CashPaymentsView.jsx"
+import OnlinePayments from "./components/modules/AdminPageModules/Payment/OnlinePayment.jsx"
+import OnlinePaymentsView from "./components/modules/AdminPageModules/Payment/OnlinePaymentsView.jsx"
+import UpdateCashPay from "./components/modules/AdminPageModules/Payment/UpdateCashPay"
+import UpdateOnlinePay from "./components/modules/AdminPageModules/Payment/UpdateOnlinePay"
+
 function App() {
 
     return (
@@ -199,14 +208,22 @@ function App() {
                 <Route path="/EditDeficit/:id" component={editDeficits}/>
                 <Route path="/DeficitDetails/:id" component={deficitDetails}/>
               
-			   {/*Order*/}
+			          {/*Order*/}
 			          <Route path="/orders" exact component={OrderHome}></Route>
 			          <Route path="/orderadd" exact component={CreatePost}></Route>
                 <Route path="/shopping" exact component={Shopping}></Route>
                 <Route path="/orderEdit/:id" exact component={EditPost}></Route>
 			          <Route path="/post/:id" exact component={PostDetails}></Route>
                 <Route path="/cartedit/:id" exact component={EditCart}></Route>
-			  
+
+                {/*Payment*/}
+                <Route path="/payments" exact component={Payments}></Route>
+                <Route path="/CashPayment" exact component={CashPayment}></Route>
+                <Route path="/CashPaymentsView" exact component={CashPaymentsView}></Route>
+                <Route path="/OnlinePayments" exact component={OnlinePayments}></Route>
+                <Route path="/OnlinePaymentsView" exact component={OnlinePaymentsView}></Route>
+                <Route path="/UpdateCashPay/:id" exact component={UpdateCashPay}></Route>
+                <Route path="/UpdateOnlinePay/:id" exact component={UpdateOnlinePay}></Route>
 
             </div>
         </div>

@@ -12,7 +12,7 @@ export default function Sidebar() {
                                  <LineStyle className="sidebarIcon"/>  <a  style={{textDecoration:'none',color:'white'}} href="/"> OVERVIEW</a>
                             </li><br/>
                             <li className="sidebarListItem"> 
-                                 <Payment className="sidebarIcon"/>  Payment
+                                 <Payment className="sidebarIcon"/> <a style={{textDecoration:'none',color:'white'}} href="/payments"> Payment</a>
                             </li><br/>
                             <li className="sidebarListItem">  
                                  <ViewList className="sidebarIcon"/>  <a  style={{textDecoration:'none',color:'white'}} href="/orders"> ORDERS</a>

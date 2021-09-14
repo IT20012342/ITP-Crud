@@ -27,6 +27,8 @@ const employeeSalary = require('./route/esals');
 const itemRoutes = require('./route/itemRoutes');
 const orderAdminRouter = require("./route/posts");
 const shoppingAdminRouter = require("./route/productShoppingRouter");
+const onlinePayRoutes = require('./route/onlinePay');
+const cashPayRoutes = require('./route/cashPay');
 //****route middleware
 app.use(stockRoutes);
 app.use(employeeRoutes);
@@ -35,7 +37,8 @@ app.use(employeeSalary);
 app.use(itemRoutes);
 app.use(orderAdminRouter);
 app.use(shoppingAdminRouter);
-
+app.use(onlinePayRoutes);
+app.use(cashPayRoutes);
 
 app.listen(PORT, () => {
     console.log(`Server is up and running on port number: ${PORT}`)
