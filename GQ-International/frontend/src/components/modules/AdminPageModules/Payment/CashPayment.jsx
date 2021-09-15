@@ -22,7 +22,6 @@ class CashPayment extends Component{
             subTot:'',
             discount:"",
             totalAmount:"",
-
             error:{}
         };
         this.onSubmit = this.onSubmit.bind(this);
@@ -55,76 +54,64 @@ class CashPayment extends Component{
         })
     }
 
-
     formValidation = () =>{
-        const{date,cusName,contactNo,address,email,itemCode,qty,description,unitPrice,price,discount,totalAmount}=this.state;
+        const{date,cusName,contactNo,address,email,itemCode,qty,description,unitPrice,discount}=this.state;
         let isValid = true;
         const error = {};
-    
+
         if(!date){
-          error["dateEmpty"] = "This field cannot be empty!";
-          isValid=false;
+            error["dateEmpty"] = "This field cannot be empty!";
+            isValid=false;
         }
-    
+
         if(!cusName){
-          error["cusNameEmpty"] = "This field cannot be empty!";
-          isValid=false;
+            error["cusNameEmpty"] = "This field cannot be empty!";
+            isValid=false;
         }
-    
+
         if(!contactNo){
-          error["contactNoEmpty"] = "This field cannot be empty!";
-          isValid=false;
+            error["contactNoEmpty"] = "This field cannot be empty!";
+            isValid=false;
         }
-    
+
         if(!address){
-          error["addressEmpty"] = "This field cannot be empty!";
-          isValid=false;
+            error["addressEmpty"] = "This field cannot be empty!";
+            isValid=false;
         }
 
         if(!email){
             error["emailEmpty"] = "This field cannot be empty!";
             isValid=false;
-          }
-      
-          if(!itemCode){
+        }
+
+        if(!itemCode){
             error["itemCodeEmpty"] = "This field cannot be empty!";
             isValid=false;
-          }
-      
-          if(!qty){
+        }
+
+        if(!qty){
             error["qtyEmpty"] = "This field cannot be empty!";
             isValid=false;
-          }
-      
-          if(!description){
+        }
+
+        if(!description){
             error["descriptionEmpty"] = "This field cannot be empty!";
             isValid=false;
-          }
+        }
 
-          if(!unitPrice){
+        if(!unitPrice){
             error["unitPriceEmpty"] = "This field cannot be empty!";
             isValid=false;
-          }
-      
-          if(!price){
-            error["priceEmpty"] = "This field cannot be empty!";
-            isValid=false;
-          }
-      
-          if(!discount){
+        }
+
+        if(!discount){
             error["discountEmpty"] = "This field cannot be empty!";
             isValid=false;
-          }
-      
-          if(!totalAmount){
-            error["totalAmountEmpty"] = "This field cannot be empty!";
-            isValid=false;
-          }
-    
+        }
+
         this.setState({error:error});
             return isValid;
-      }
-    
+    }
 
     onSubmit(e){
         e.preventDefault();
@@ -183,23 +170,20 @@ class CashPayment extends Component{
         }).catch(function(error){
             console.log(error.response.data);
         });
-    }
+        }
     }
 
       render(){
         const{error}=this.state;
           return(
                 <div>
-                   <div style={{width:"100%"}}>
+                    
                     <Form>
-                    <div>
+                    <div >
                         <div class="page-header text-blue-d2">
                             <h1 class="page-title text-secondary-d1">
                                 Invoice
-                                <small class="page-info">
-                                    <i class="fa fa-angle-double-right text-80"></i>
-                                    No: #0001
-                                </small>
+                                
                             </h1>
 
                             <div class="page-tools">
@@ -216,7 +200,7 @@ class CashPayment extends Component{
                             </div>
                         </div>
 
-                        <div>
+                        <div >
                             <div class="row mt-4">
                                 <div class="col-12 col-lg-10 offset-lg-1">
                                     <div class="row">
@@ -233,7 +217,7 @@ class CashPayment extends Component{
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <Form.Group as={Row} >
-                                            <Form.Label column sm={5}>Customer Name : </Form.Label>
+                                            <Form.Label column sm={5} style={{color:'black'}}>Customer Name : </Form.Label>
                                             <Col sm={5}>
                                             <input type='text'
                                                 className='form-control'
@@ -245,7 +229,7 @@ class CashPayment extends Component{
                                             </Form.Group>
 
                                             <Form.Group as={Row} >
-                                            <Form.Label column sm={5}>Contact Number : </Form.Label>
+                                            <Form.Label column sm={5} style={{color:'black'}}>Contact Number : </Form.Label>
                                             <Col sm={5}>
                                             <input type='text'
                                                     className='form-control'
@@ -257,19 +241,19 @@ class CashPayment extends Component{
                                             </Form.Group>
 
                                             <Form.Group as={Row} >
-                                            <Form.Label column sm={5}>Address : </Form.Label>
+                                            <Form.Label column sm={5} style={{color:'black'}}>Address : </Form.Label>
                                             <Col sm={5}>
                                             <input type='text'
                                                     className='form-control'
                                                     name='address'
                                                     value={this.state.address}
                                                     onChange={this.handleInputChange}/>
-                                                     <div className="text-danger">{this.state.error.addressEmpty}</div>
+                                                    <div className="text-danger">{this.state.error.addressEmpty}</div>
                                             </Col>
                                             </Form.Group>
 
                                             <Form.Group as={Row} >
-                                            <Form.Label column sm={5}>email : </Form.Label>
+                                            <Form.Label column sm={5} style={{color:'black'}}>email : </Form.Label>
                                             <Col sm={5}>
                                             <input type='text'
                                                     className='form-control'
@@ -306,8 +290,7 @@ class CashPayment extends Component{
                                     </div>
 
                                     <div class="mt-4">
-                                        
-                                    <div class="row text-600 text-white bgc-default-tp1 py-25">
+                                        <div class="row text-600 text-white bgc-default-tp1 py-25">
                                             <div class="d-none d-sm-block col-1">#</div>
                                             <div class="col-9 col-sm-3">Item Code</div>
                                             <div class="d-none d-sm-block col-4 col-sm-1">Qty</div>
@@ -331,12 +314,12 @@ class CashPayment extends Component{
                                                 </div>
 
                                                 <div class="d-none d-sm-block col-4 col-sm-1">
-                                                <input type='number'
+                                                <input type='number' min='1'
                                                         className='form-control'
                                                         name='qty'
                                                         value={this.state.qty}
                                                         onChange={this.handleInputChange}/>
-
+                                                        <div className="text-danger">{this.state.error.qtyEmpty}</div>
                                                 </div>
 
                                                 <div class="d-none d-sm-block col-sm-3">
@@ -439,7 +422,7 @@ class CashPayment extends Component{
                         </div>
                     </div>
                     </Form>
-                    </div>
+                    
                 </div>
           );
       }

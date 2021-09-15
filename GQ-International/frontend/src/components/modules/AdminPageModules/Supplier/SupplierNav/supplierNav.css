@@ -1,0 +1,16 @@
+.supplierNavbar{
+    font-weight: 1000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+/* .navSupplier{
+    
+}
+
+.navitemsSupplier{
+
+} */
+.navitemsSupplier:hover{
+    color : red;
+}

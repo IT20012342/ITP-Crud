@@ -169,6 +169,22 @@ import OnlinePaymentsView from "./components/modules/AdminPageModules/Payment/On
 import UpdateCashPay from "./components/modules/AdminPageModules/Payment/UpdateCashPay"
 import UpdateOnlinePay from "./components/modules/AdminPageModules/Payment/UpdateOnlinePay"
 
+/*client relation */
+import MainCR from './components/modules/AdminPageModules/ClientRelation/MainCR';
+import EditDebt from './components/modules/AdminPageModules/ClientRelation/EditDebtor'
+import AddDebtor from './components/modules/AdminPageModules/ClientRelation/AddDebtor'
+
+/*Supplier*/
+//import ViewSupplier from './components/modules/AdminPageModules/Supplier/SupplierView/viewSupplier';
+//import ViewUpcoming from'./components/modules/AdminPageModules/Supplier/UpcomingView/viewUpcoming';
+import AllSupplier from './components/modules/AdminPageModules/Supplier/SupplierView/AllSupplier';
+import AllUpcomming from './components/modules/AdminPageModules/Supplier/UpcomingView/AllUpcoming';
+import AdminExpensesPage from './components/Pages/Admin/AdminExpenses/AdminExpensePage';
+import AddExpense from './components/Pages/Admin/AdminExpenses/AddExpense';
+import EditExpense from './components/Pages/Admin/AdminExpenses/EditExpense';
+import ExpenseDetails from './components/Pages/Admin/AdminExpenses/ExpenseDetails';
+
+
 function App() {
 
     return (
@@ -224,6 +240,31 @@ function App() {
                 <Route path="/OnlinePaymentsView" exact component={OnlinePaymentsView}></Route>
                 <Route path="/UpdateCashPay/:id" exact component={UpdateCashPay}></Route>
                 <Route path="/UpdateOnlinePay/:id" exact component={UpdateOnlinePay}></Route>
+
+                {/*Client Relation*/}
+                <Route path="/CR" exact component={MainCR}></Route>
+                <Route path="/editDebt/:id" component={EditDebt}></Route>
+                <Route path="/addDebt" component={AddDebtor}></Route>
+
+                {/*Supplier*/}
+                <Route path="/supplier" component={AllSupplier}></Route>
+                <Route path="/upcomingorder" component={AllUpcomming}></Route>
+
+
+                {/*Expenses Routes */}
+          <Route path="/expensesHome">
+            <AdminExpensesPage />
+          </Route>
+          <Route path="/addExpense">
+            <AddExpense />
+          </Route>
+          <Route
+            path="/editE/:id"
+            render={(props) => <EditExpense {...props} />}
+          />
+          <Route path="/expense/:id">
+            <ExpenseDetails />
+          </Route>
 
             </div>
         </div>

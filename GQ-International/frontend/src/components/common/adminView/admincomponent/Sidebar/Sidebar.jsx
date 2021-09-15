@@ -12,7 +12,7 @@ export default function Sidebar() {
                                  <LineStyle className="sidebarIcon"/>  <a  style={{textDecoration:'none',color:'white'}} href="/"> OVERVIEW</a>
                             </li><br/>
                             <li className="sidebarListItem"> 
-                                 <Payment className="sidebarIcon"/> <a style={{textDecoration:'none',color:'white'}} href="/payments"> Payment</a>
+                                 <Payment className="sidebarIcon"/> <a style={{textDecoration:'none',color:'white'}} href="/payments"> PAYMENT</a>
                             </li><br/>
                             <li className="sidebarListItem">  
                                  <ViewList className="sidebarIcon"/>  <a  style={{textDecoration:'none',color:'white'}} href="/orders"> ORDERS</a>
@@ -21,16 +21,17 @@ export default function Sidebar() {
                                  <PeopleAltOutlined className="sidebarIcon"/> <a  style={{textDecoration:'none',color:'white'}} href="/allEmp"> EMPLOYEE</a>
                             </li><br/>
                             <li className="sidebarListItem">
-                                 <SupervisorAccountRounded className="sidebarIcon"/>  SUPPLIERS
+                                 <SupervisorAccountRounded className="sidebarIcon"/> <a  style={{textDecoration:'none',color:'white'}} href="/supplier"> SUPPLIERS</a>
                             </li><br/>
                             <li className="sidebarListItem">
                                  <PeopleAlt className="sidebarIcon"/>  CUSTOMERS
                             </li><br/>
                             <li className="sidebarListItem">
-                                 <SupervisedUserCircle className="sidebarIcon"/>  CLIENT RELATION
+                                 <SupervisedUserCircle className="sidebarIcon"/><a href="/CR" style={{textDecoration:'none',color:'white'}}> CLIENT RELATION</a>
                             </li><br/>
                             <li className="sidebarListItem">
-                                 <BarChart className="sidebarIcon"/>   EXPENSES
+                                 <BarChart className="sidebarIcon"/><a href="/expensesHome" style={{ textDecoration: 'none', color: 'white' }}>{' '}EXPENSES{' '}</a>
+              
                             </li><br/>
                             <li className="sidebarListItem">
                                  <ShowChart className="sidebarIcon"/> <a href="/Stock" style={{textDecoration:'none',color:'white'}}> STOCKS</a>
