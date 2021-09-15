@@ -5,7 +5,7 @@ import EditExpenseForm from '../../../modules/AdminPageModules/Expenses/EditExpe
 export default class EditExpense extends Component {
   render() {
     return (
-      <div className="editPageStyle" style={{ paddingLeft: '250px' }}>
+      <div className="editPageStyle" style={{ paddingLeft: '20px' }}>
         <AdminNavBar />
         <EditExpenseForm />
       </div>

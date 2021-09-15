@@ -176,249 +176,259 @@ class EditExpenseForm extends Component {
           Edit Expense
         </h1>
 
-        <form
-          className="needs-validation"
+        <div
+          className="container"
           style={{
-            backgroundColor: 'rgba(0, 0, 0, 0.6)',
-            maxWidth: '1200px',
-            margin: 'auto',
-            paddingLeft: '180px',
-            paddingTop: '50px',
-            paddingBottom: '20px',
+            paddingLeft: '50px',
+            paddingRight: '50px',
+            paddingBottom: '30px',
           }}
         >
-          <div className="form-group" style={{ marginBottom: '15px' }}>
-            <label style={{ marginBottom: '10px', fontSize: '20px' }}>
-              Topic
-            </label>
-            <input
-              type="text"
-              className="form-control"
-              style={{
-                backgroundColor: 'rgba(0, 0, 0, 0.6)',
-                borderColor: 'red',
-                borderBottomWidth: 4,
-                borderTopWidth: 0,
-                borderLeftWidth: 0,
-                borderRightWidth: 0,
-                color: '#fff',
-                width: '650px',
-              }}
-              name="topic"
-              placeholder="Enter Topic"
-              value={this.state.topic}
-              onChange={this.handleInputChange}
-            />
-            <br />
-            <div style={{ color: 'red' }}>{this.state.topicError}</div>
-          </div>
-
-          <div className="form-group" style={{ marginBottom: '15px' }}>
-            <label style={{ marginBottom: '10px', fontSize: '20px' }}>
-              Amount
-            </label>
-            <input
-              type="text"
-              className="form-control"
-              style={{
-                backgroundColor: 'rgba(0, 0, 0, 0.6)',
-                borderColor: 'red',
-                borderBottomWidth: 4,
-                borderTopWidth: 0,
-                borderLeftWidth: 0,
-                borderRightWidth: 0,
-                color: '#fff',
-                width: '650px',
-              }}
-              name="amount"
-              placeholder="Enter Amount"
-              value={this.state.amount}
-              onChange={this.handleInputChange}
-            />
-            <br />
-            <div style={{ color: 'red' }}>{this.state.amountError}</div>
-          </div>
-
-          <div className="form-group" style={{ marginBottom: '15px' }}>
-            <label style={{ marginBottom: '10px', fontSize: '20px' }}>
-              Date
-            </label>
-            <input
-              type="text"
-              className="form-control"
-              style={{
-                backgroundColor: 'rgba(0, 0, 0, 0.6)',
-                borderColor: 'red',
-                borderBottomWidth: 4,
-                borderTopWidth: 0,
-                borderLeftWidth: 0,
-                borderRightWidth: 0,
-                color: '#fff',
-                width: '650px',
-              }}
-              name="date"
-              placeholder="Enter Date"
-              value={this.state.date}
-              onChange={this.handleInputChange}
-            />
-            <br />
-            <div style={{ color: 'red' }}>{this.state.dateError}</div>
-          </div>
-
-          <div className="form-group" style={{ marginBottom: '15px' }}>
-            <label style={{ marginBottom: '10px', fontSize: '20px' }}>
-              Category
-            </label>
-            <br />
-            <select
-              name="category"
-              value={this.state.category}
-              onChange={this.handleInputChange}
-              style={{
-                backgroundColor: 'rgba(0, 0, 0, 0.6)',
-                borderColor: 'red',
-                borderBottomWidth: 4,
-                borderTopWidth: 0,
-                borderLeftWidth: 0,
-                borderRightWidth: 0,
-                color: '#fff',
-                width: '650px',
-              }}
-            >
-              <option id="0" style={{ backgroundColor: '#000' }}>
-                Electricity Bills
-              </option>
-              <option id="1" style={{ backgroundColor: '#000' }}>
-                Internet and Telephone Bills
-              </option>
-              <option id="2" style={{ backgroundColor: '#000' }}>
-                Maintainance Costs
-              </option>
-              <option id="3" style={{ backgroundColor: '#000' }}>
-                Employee Costs
-              </option>
-              <option id="1" style={{ backgroundColor: '#000' }}>
-                Inventory Costs
-              </option>
-            </select>
-            <br />
-            <div style={{ color: 'red' }}>{this.state.categoryError}</div>
-          </div>
-
-          <br />
-          <div className="form-group" style={{ marginBottom: '15px' }}>
-            <label style={{ marginBottom: '10px', fontSize: '20px' }}>
-              Description
-            </label>
-            <input
-              type="text"
-              className="form-control"
-              style={{
-                backgroundColor: 'rgba(0, 0, 0, 0.6)',
-                borderColor: 'red',
-                borderBottomWidth: 4,
-                borderTopWidth: 0,
-                borderLeftWidth: 0,
-                borderRightWidth: 0,
-                color: '#fff',
-                width: '650px',
-              }}
-              name="description"
-              placeholder="Enter Description"
-              value={this.state.description}
-              onChange={this.handleInputChange}
-            />
-          </div>
-
-          <br />
-          <div className="form-group" style={{ marginBottom: '15px' }}>
-            <label style={{ marginBottom: '10px', fontSize: '20px' }}>
-              Bank Account Number
-            </label>
-            <input
-              type="text"
-              className="form-control"
-              style={{
-                backgroundColor: 'rgba(0, 0, 0, 0.6)',
-                borderColor: 'red',
-                borderBottomWidth: 4,
-                borderTopWidth: 0,
-                borderLeftWidth: 0,
-                borderRightWidth: 0,
-                color: '#fff',
-                width: '650px',
-              }}
-              name="bankAccountNumber"
-              placeholder="Enter Bank Account Number"
-              value={this.state.bankAccountNumber}
-              onChange={this.handleInputChange}
-            />
-          </div>
-
-          <br />
-          <div className="form-group" style={{ marginBottom: '15px' }}>
-            <label style={{ marginBottom: '10px', fontSize: '20px' }}>
-              Email
-            </label>
-            <input
-              type="text"
-              className="form-control"
-              style={{
-                backgroundColor: 'rgba(0, 0, 0, 0.6)',
-                borderColor: 'red',
-                borderBottomWidth: 4,
-                borderTopWidth: 0,
-                borderLeftWidth: 0,
-                borderRightWidth: 0,
-                color: '#fff',
-                width: '650px',
-              }}
-              name="email"
-              placeholder="Enter Email"
-              value={this.state.email}
-              onChange={this.handleInputChange}
-            />
-            <br />
-            <div style={{ color: 'red' }}>{this.state.emailError}</div>
-          </div>
-
-          <div className="form-group" style={{ marginBottom: '15px' }}>
-            <label style={{ marginBottom: '10px', fontSize: '20px' }}>
-              Phone Number
-            </label>
-            <input
-              type="text"
-              className="form-control"
-              style={{
-                backgroundColor: 'rgba(0, 0, 0, 0.6)',
-                borderColor: 'red',
-                borderBottomWidth: 4,
-                borderTopWidth: 0,
-                borderLeftWidth: 0,
-                borderRightWidth: 0,
-                color: '#fff',
-                width: '650px',
-              }}
-              name="phoneNumber"
-              placeholder="Enter Phone Number"
-              value={this.state.phoneNumber}
-              onChange={this.handleInputChange}
-            />
-            <br />
-            <div style={{ color: 'red' }}>{this.state.phoneNumberError}</div>
-          </div>
-
-          <Link
-            class="btn btn-outline-danger"
-            role="button"
-            aria-pressed="true"
-            style={{ margin: '30px', fontSize: '22px' }}
-            onClick={this.onSubmit}
+          <form
+            className="needs-validation"
+            style={{
+              backgroundColor: 'rgba(0, 0, 0, 0.6)',
+              width: '1100px',
+              paddingLeft: '70px',
+              paddingRight: '70px',
+              marginRight: '30px',
+              paddingTop: '50px',
+              paddingBottom: '20px',
+            }}
           >
-            Update
-          </Link>
-        </form>
-        <div style={{ paddingTop: '50px' }}></div>
+            <div className="form-group" style={{ marginBottom: '15px' }}>
+              <label style={{ marginBottom: '10px', fontSize: '20px' }}>
+                Topic
+              </label>
+              <input
+                type="text"
+                className="form-control"
+                style={{
+                  backgroundColor: 'rgba(0, 0, 0, 0.6)',
+                  borderColor: 'red',
+                  borderBottomWidth: 4,
+                  borderTopWidth: 0,
+                  borderLeftWidth: 0,
+                  borderRightWidth: 0,
+                  color: '#fff',
+                  width: '960px',
+                }}
+                name="topic"
+                placeholder="Enter Topic"
+                value={this.state.topic}
+                onChange={this.handleInputChange}
+              />
+              <br />
+              <div style={{ color: 'red' }}>{this.state.topicError}</div>
+            </div>
+
+            <div className="form-group" style={{ marginBottom: '15px' }}>
+              <label style={{ marginBottom: '10px', fontSize: '20px' }}>
+                Amount
+              </label>
+              <input
+                type="text"
+                className="form-control"
+                style={{
+                  backgroundColor: 'rgba(0, 0, 0, 0.6)',
+                  borderColor: 'red',
+                  borderBottomWidth: 4,
+                  borderTopWidth: 0,
+                  borderLeftWidth: 0,
+                  borderRightWidth: 0,
+                  color: '#fff',
+                  width: '960px',
+                }}
+                name="amount"
+                placeholder="Enter Amount"
+                value={this.state.amount}
+                onChange={this.handleInputChange}
+              />
+              <br />
+              <div style={{ color: 'red' }}>{this.state.amountError}</div>
+            </div>
+
+            <div className="form-group" style={{ marginBottom: '15px' }}>
+              <label style={{ marginBottom: '10px', fontSize: '20px' }}>
+                Date
+              </label>
+              <input
+                type="text"
+                className="form-control"
+                style={{
+                  backgroundColor: 'rgba(0, 0, 0, 0.6)',
+                  borderColor: 'red',
+                  borderBottomWidth: 4,
+                  borderTopWidth: 0,
+                  borderLeftWidth: 0,
+                  borderRightWidth: 0,
+                  color: '#fff',
+                  width: '960px',
+                }}
+                name="date"
+                placeholder="Enter Date"
+                value={this.state.date}
+                onChange={this.handleInputChange}
+              />
+              <br />
+              <div style={{ color: 'red' }}>{this.state.dateError}</div>
+            </div>
+
+            <div className="form-group" style={{ marginBottom: '15px' }}>
+              <label style={{ marginBottom: '10px', fontSize: '20px' }}>
+                Category
+              </label>
+              <br />
+              <select
+                name="category"
+                value={this.state.category}
+                onChange={this.handleInputChange}
+                style={{
+                  backgroundColor: 'rgba(0, 0, 0, 0.6)',
+                  borderColor: 'red',
+                  borderBottomWidth: 4,
+                  borderTopWidth: 0,
+                  borderLeftWidth: 0,
+                  borderRightWidth: 0,
+                  color: '#fff',
+                  width: '960px',
+                }}
+              >
+                <option id="0" style={{ backgroundColor: '#000' }}>
+                  Electricity Bills
+                </option>
+                <option id="1" style={{ backgroundColor: '#000' }}>
+                  Internet and Telephone Bills
+                </option>
+                <option id="2" style={{ backgroundColor: '#000' }}>
+                  Maintainance Costs
+                </option>
+                <option id="3" style={{ backgroundColor: '#000' }}>
+                  Employee Costs
+                </option>
+                <option id="1" style={{ backgroundColor: '#000' }}>
+                  Inventory Costs
+                </option>
+              </select>
+              <br />
+              <div style={{ color: 'red' }}>{this.state.categoryError}</div>
+            </div>
+
+            <br />
+            <div className="form-group" style={{ marginBottom: '15px' }}>
+              <label style={{ marginBottom: '10px', fontSize: '20px' }}>
+                Description
+              </label>
+              <input
+                type="text"
+                className="form-control"
+                style={{
+                  backgroundColor: 'rgba(0, 0, 0, 0.6)',
+                  borderColor: 'red',
+                  borderBottomWidth: 4,
+                  borderTopWidth: 0,
+                  borderLeftWidth: 0,
+                  borderRightWidth: 0,
+                  color: '#fff',
+                  width: '960px',
+                }}
+                name="description"
+                placeholder="Enter Description"
+                value={this.state.description}
+                onChange={this.handleInputChange}
+              />
+            </div>
+
+            <br />
+            <div className="form-group" style={{ marginBottom: '15px' }}>
+              <label style={{ marginBottom: '10px', fontSize: '20px' }}>
+                Bank Account Number
+              </label>
+              <input
+                type="text"
+                className="form-control"
+                style={{
+                  backgroundColor: 'rgba(0, 0, 0, 0.6)',
+                  borderColor: 'red',
+                  borderBottomWidth: 4,
+                  borderTopWidth: 0,
+                  borderLeftWidth: 0,
+                  borderRightWidth: 0,
+                  color: '#fff',
+                  width: '960px',
+                }}
+                name="bankAccountNumber"
+                placeholder="Enter Bank Account Number"
+                value={this.state.bankAccountNumber}
+                onChange={this.handleInputChange}
+              />
+            </div>
+
+            <br />
+            <div className="form-group" style={{ marginBottom: '15px' }}>
+              <label style={{ marginBottom: '10px', fontSize: '20px' }}>
+                Email
+              </label>
+              <input
+                type="text"
+                className="form-control"
+                style={{
+                  backgroundColor: 'rgba(0, 0, 0, 0.6)',
+                  borderColor: 'red',
+                  borderBottomWidth: 4,
+                  borderTopWidth: 0,
+                  borderLeftWidth: 0,
+                  borderRightWidth: 0,
+                  color: '#fff',
+                  width: '960px',
+                }}
+                name="email"
+                placeholder="Enter Email"
+                value={this.state.email}
+                onChange={this.handleInputChange}
+              />
+              <br />
+              <div style={{ color: 'red' }}>{this.state.emailError}</div>
+            </div>
+
+            <div className="form-group" style={{ marginBottom: '15px' }}>
+              <label style={{ marginBottom: '10px', fontSize: '20px' }}>
+                Phone Number
+              </label>
+              <input
+                type="text"
+                className="form-control"
+                style={{
+                  backgroundColor: 'rgba(0, 0, 0, 0.6)',
+                  borderColor: 'red',
+                  borderBottomWidth: 4,
+                  borderTopWidth: 0,
+                  borderLeftWidth: 0,
+                  borderRightWidth: 0,
+                  color: '#fff',
+                  width: '960px',
+                }}
+                name="phoneNumber"
+                placeholder="Enter Phone Number"
+                value={this.state.phoneNumber}
+                onChange={this.handleInputChange}
+              />
+              <br />
+              <div style={{ color: 'red' }}>{this.state.phoneNumberError}</div>
+            </div>
+
+            <Link
+              class="btn btn-outline-danger"
+              role="button"
+              aria-pressed="true"
+              style={{ margin: '30px', fontSize: '22px' }}
+              onClick={this.onSubmit}
+            >
+              Update
+            </Link>
+          </form>
+          <div style={{ paddingTop: '50px' }}></div>
+        </div>
       </div>
     );
   }
